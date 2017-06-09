@@ -46,6 +46,7 @@ class TestExcel2Json(unittest.TestCase):
         self.assertEqual(row0['Name'], 'Hello')
         self.assertEqual(row0['Level'], 1)
         self.assertTrue(row0['Bool'])
+        self.assertEqual(row0['Formula'], 'Hello1')
 
     def test_excel2json_with_no_table(self):
         """ 测试将excel写入json文件, 不指定table """
