@@ -53,7 +53,9 @@ def table2obj(table):
     for row_id in xrange(1, row_count):
         row = {}
         for col_id in range(col_count):
-            row[col_names[col_id]] = table.get_cell(row_id, col_id).value
+            value = table.get_cell(row_id, col_id).value
+            if value is not None:
+                row[col_names[col_id]] = value
         result.append(row)
 
     return result
