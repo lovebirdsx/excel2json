@@ -27,10 +27,8 @@ class TestExcel2Json(unittest.TestCase):
     OUT_DIR1 = 'output1'
     OUT_DIR2 = 'output2'
 
-    def __init__(self, *args, **kwargs):
+    def setUp(self):
         """ 测试的相关初始化 """
-
-        super(TestExcel2Json, self).__init__(*args, **kwargs)
 
         clean_and_make_dir(TestExcel2Json.OUT_DIR1)
         clean_and_make_dir(TestExcel2Json.OUT_DIR2)
